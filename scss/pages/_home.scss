@@ -1,0 +1,55 @@
+.section-about{
+	background: $color-light-1;
+	padding: 10rem 0;
+	&__content{
+		display: flex;
+		justify-content: space-around;
+	}
+	&__text,
+	&__img-composition{
+		flex-basis: 50%;
+	}
+	&__text{
+		
+		text-align: left;
+	}
+	&__img-composition{  }
+}
+
+.section-features{
+	padding: 20rem 0;
+	background: linear-gradient(to right bottom, rgba($color-primary-light,0.8),
+	rgba($color-primary-dark,0.8)),
+	url("../img/nat-4.jpg") ;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	transform: skewY(-7deg);
+	& > * {
+        transform: skewY(7deg);
+    }
+	&__container{
+		
+		display:flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+	}
+	&__box{
+		flex-basis: 23%;
+		padding: 2.5rem;
+		background: rgba($color-light-1, 0.8);
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 4rem rgba($color-dark,0.15);
+		transition: transform $transition-speed;
+		&:hover {
+			transform: translateY(-1rem);
+		}
+	}
+	&__icon{
+		background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+		-webkit-background-clip: text;
+		color: transparent;
+		font-size: 6rem;
+	}
+}
