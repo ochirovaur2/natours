@@ -340,29 +340,41 @@ body {
   display: inline-block;
   padding: 6rem; }
 
-.book__input, .book__email {
+.book__input {
   font-size: 1.5rem;
-  width: 100%;
+  width: 95%;
   padding: 1.5rem 2rem;
   border-radius: 2px;
   border: none;
   border-bottom: 3px solid transparent;
   transition: all 0.2s; }
-  .book__input:focus, .book__email:focus {
+  .book__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a; }
-  .book__input:focus:invalid, .book__email:focus:invalid {
+  .book__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
-  .book__input::-webkit-input-placeholder, .book__email::-webkit-input-placeholder {
+  .book__input::-webkit-input-placeholder {
     color: #55c57a; }
+
+.book__label {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.6rem;
+  transition: all .3s; }
+
+.book__input:placeholder-shown + .book__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .book__radio-group {
   display: flex;
   justify-content: space-between; }
 
 .book__radio-div {
-  position: relative; }
+  position: relative;
+  width: 80%; }
 
 .book__radio, .book__radio-label {
   cursor: pointer; }
