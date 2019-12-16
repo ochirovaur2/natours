@@ -5,7 +5,7 @@ $color-primary-light: #7ed56f;
 $color-light-1: #f7f7f7;
 $color-light-secondary: #eee;
 $color-dark: #000;
-
+$color-footer: #333333;
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -18,3 +18,7 @@ $max-width: 114rem;
 $default-font-size: 1.6rem;
 
 $transition-speed: 0.2s;
+
+$skewY-primary: skewY(-5deg);
+$skewY-primary-opposite: skewY(5deg);
+

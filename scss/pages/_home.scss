@@ -18,15 +18,26 @@
 
 .section-features{
 	padding: 20rem 0;
-	background: linear-gradient(to right bottom, rgba($color-primary-light,0.8),
-	rgba($color-primary-dark,0.8)),
-	url("../img/nat-4.jpg") ;
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	transform: skewY(-7deg);
+	
+	overflow: hidden;
+	background: black;
+	transform: $skewY-primary;
+	position: relative;
+	&__background{
+		position: absolute;
+		top: -10%;
+		left: 0;
+		width: 100%;
+		height: 140%;
+		background: linear-gradient(to right bottom, rgba($color-primary-light,0.8),
+	    rgba($color-primary-dark,0.8)),
+	    url("../img/nat-4.jpg") ;
+	    background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
 	& > * {
-        transform: skewY(7deg);
+        transform: $skewY-primary-opposite;
     }
 	&__container{
 		
@@ -53,3 +64,82 @@
 		font-size: 6rem;
 	}
 }
+
+.section-stories{
+	background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	// transform: $skewY-primary;
+	// & > * {
+	// 	transform: $skewY-primary-opposite;
+	// }
+	clip-path: polygon(0 12rem, 100% 0, 100% 100%, 0 100%);
+	&__stories-box{
+		width: 75%;
+	    box-shadow: 0 3rem 6rem rgba($color-dark, 0.1);
+	    background-color: rgba($color-light-1, .6);
+	    border-radius: 3px;
+	    padding: 6rem 6rem 4rem 9rem;
+	   
+	    font-size: $default-font-size;
+	    transform: skewX(-12deg);
+	    &:hover .section-stories__photo-caption {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+		&:hover .section-stories__photo {
+	        transform: translateX(-4rem) scale(1);
+	        filter: blur(3px) brightness(80%);
+	    }
+	}	
+	    
+
+	
+	&__photo-box{
+		width: 15rem;
+        height: 15rem;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle();
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle();
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        overflow: hidden;
+		float: left;
+		
+	}
+	&__photo{
+		height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+        
+	}
+	&__photo-caption{
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 20%);
+		color: $color-light-1;
+		opacity: 0;
+		font-size: 1.7rem;
+		transition: all 0.5s;
+		
+	}
+	&__text {
+        transform: skewX(12deg);
+       	
+    }
+}
+
+.section-book{
+	padding: 15rem;
+	background: linear-gradient(105deg, 
+		                        rgba($color-light-1,0.9) 0%,
+		                        rgba($color-light-1,0.9) 50%,
+                                transparent 50%),
+	                            url("../img/nat-10.jpg") ;
+    background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+

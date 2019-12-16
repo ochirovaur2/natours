@@ -42,6 +42,10 @@ body{
 		text-shadow: .5rem 1rem 2rem rgba($color-dark, 0.2)
 	}
 }
+.heading-secondary_light{
+	background: none;
+	color: $color-light-1;
+}
 
 .heading-tertiary{
 	font-size: $default-font-size;

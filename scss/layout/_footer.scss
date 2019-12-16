@@ -1,0 +1,44 @@
+.footer{
+	background: $color-footer;
+	padding: 10rem 0;
+	&__logo{
+		width: 15rem;
+		height: auto;
+
+		img{
+			width: inherit;
+			padding-bottom: 10rem;
+		}
+	}
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__links,
+	&__copyright{
+		flex-basis: 48%;
+		border-top: 1px solid $color-light-1;
+		padding: 2rem;
+		font-size: $default-font-size;
+		color: $color-light-1;
+	}
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	&__link{
+		display: inline-block;
+		color: inherit;
+		transition: color $transition-speed,
+		transform $transition-speed, 
+		text-shadow $transition-speed;
+		&:hover{
+			color: $color-primary;
+			transform: scale(1.4) rotate(5deg);
+			
+			
+			
+		}
+	}
+}

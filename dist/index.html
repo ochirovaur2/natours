@@ -26,6 +26,7 @@
             </div>
         </header>
         <main class="main">
+            <!-- Section about -->
             <div class="container">
                 <section class="section-about">
                     <div class="u-center-text">
@@ -51,12 +52,12 @@
                             </div>
                         </div>
                     </div>
-                
                 </section>
             </div>
-            
-            
+            <!-- /Section about -->
+            <!-- Section features -->
             <section class="section-features u-center-text my-big">
+                <div class="section-features__background"></div>
                 <div class="container section-features__container">
                     <div class="section-features__box ">
                         <i class="section-features__icon icon-basic-world"></i>
@@ -88,7 +89,8 @@
                     </div>
                 </div>
             </section>
-
+            <!-- /Section features -->
+            <!-- Section tours -->
             <section class="section-tours py-big">
                 <div class="container">
                     <h2 class="heading-secondary my-bottom-big u-center-text">
@@ -183,7 +185,124 @@
                 </div>
                 
             </section>
+            <!-- /Section tours -->
+            <!-- Section-stories -->
+
+            <section class="section-stories py-big">
+                <div class="container">
+                    <h2 class="heading-secondary heading-secondary_light u-center-text my-big">WE MAKE PEOPLE GENUINELY HAPPY</h2>
+
+                    <div class="section-stories__stories-box my-0-auto my-bottom-3">
+                        <figure class="section-stories__photo-box">
+                            <img src="img/nat-9.jpg" alt="Person on a tour" class="section-stories__photo">
+                            <figcaption class="section-stories__photo-caption">Jack Wilson</figcaption>
+                        </figure>
+                        <div class="section-stories__text">
+                            <h3 class="heading-tertiary my-bottom-small">
+                                WOW! MY LIFE IS COMPLETELY DIFFERENT NOW
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="section-stories__stories-box my-0-auto">
+                        <figure class="section-stories__photo-box">
+                            <img src="img/nat-8.jpg" alt="Person on a tour" class="section-stories__photo">
+                            <figcaption class="section-stories__photo-caption">Mary Smith</figcaption>
+                        </figure>
+                        <div class="section-stories__text">
+                            <h3 class="heading-tertiary my-bottom-small">
+                                I HAD THE BEST WEEK EVER WITH MY FAMILY
+                            </h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
+                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- BTN -->
+                    <div class="u-center-text my-top-normal">
+                        <a href="#" class="btn btn_white btn_animated">Read all stories →</a>
+                    </div>
+                </div>
+                    
+            </section>
+            <!-- /Section stories -->
+            <section class="section-book">
+                <div class="container book">
+                    <form action="#" class="book__form-box">
+                        <div class="my-bottom-3">
+                            <h2 class="heading-secondary">
+                                START BOOKING NOW
+                            </h2>
+                        </div>
+                        <div class="book__form my-bottom-3">
+                            <input type="text" class="book__input" placeholder="Full name" id="name" required>
+                        </div>
+                        <div class="book__form my-bottom-3">
+                            <input type="email" class="book__email" placeholder="Email address" id="email" required>
+                        </div>
+                        <div class="book__radio-group my-bottom-3 py-left-rigth-small">
+                            <div class="book__radio-div">
+                                <input type="radio" name="book__radio" class="book__radio" id="book__radio-small" checked>
+                                <label for="book__radio-small" class="book__radio-label">   <span class="book__radio-button"></span>
+                                    <span>Small tour group</span> 
+                                </label>
+                            </div>
+                            <div class="book__radio-div">
+                                <input type="radio" name="book__radio" class="book__radio" id="book__radio-large" >
+                                 <label for="book__radio-large" class="book__radio-label">
+                                    <span class="book__radio-button"></span>
+                                    <span>Large tour group</span>
+                                 </label>
+                            </div>
+
+                            
+                        </div>
+                        <div>
+                            <button class="btn btn_primary-color btn_animated">
+                                Next step →
+                            </button>
+                        </div>   
+                           
+                        
+                    </form>
+                </div>
+            </section>
         </main>
+       
+       <footer class="footer">
+           <div class="container">
+            <div class="footer__logo-box u-center-text">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png" class="">
+                </picture>
+            </div>
+            
+            <div class="footer__content">
+                <div class="footer__links">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer__copyright u-center-text">
+                    <p>
+                        Copyright © by Jonas Schmedtmann 2017. 
+                    </p>
+                </div>
+            </div>
+           </div>
+       </footer>
         
     
     </body>
