@@ -494,8 +494,9 @@ body {
     font-size: 3rem;
     color: #f7f7f7;
     transition: all 0.2s;
-    padding: 2rem 4rem;
+    padding: 2rem 6rem;
     position: relative;
+    border-radius: 3px;
     overflow: hidden;
     color: #f7f7f7;
     transition: all 1s; }
