@@ -112,6 +112,9 @@ body {
 .py-left-rigth-small {
   padding: 0 1.6rem; }
 
+.py-left-rigth-normal {
+  padding: 0 3rem; }
+
 .py-big {
   padding: 8rem 0; }
 
@@ -218,7 +221,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 114rem; }
+  max-width: 114rem;
+  display: relative; }
 
 .composition {
   position: relative;
@@ -361,9 +365,9 @@ body {
   display: inline-block;
   padding: 1rem;
   font-size: 1.6rem;
-  transition: all .3s; }
+  transition: all 0.2s; }
 
-.book__input:placeholder-shown + .book__label {
+.book__input:placeholder-shown ~ .book__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
@@ -415,6 +419,75 @@ body {
 
 .book__radio:checked ~ .book__radio-label .book__radio-button::after {
   opacity: 1; }
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 3rem; }
+  .nav__chk {
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    z-index: 1111;
+    height: 7rem;
+    width: 7rem;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer; }
+  .nav__label {
+    display: flex;
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    z-index: 1;
+    height: 7rem;
+    width: 7rem;
+    background: #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center; }
+    .nav__label-composition {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2px;
+      width: 50%;
+      background: #000;
+      transition: all 0.4s ease; }
+      .nav__label-composition::before, .nav__label-composition::after {
+        content: "";
+        position: absolute;
+        top: -1rem;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+        transition: all 0.4s ease; }
+      .nav__label-composition::after {
+        top: 1rem; }
+  .nav__chk:checked ~ .nav__label .nav__label-composition {
+    transform: rotate(135deg); }
+    .nav__chk:checked ~ .nav__label .nav__label-composition::before, .nav__chk:checked ~ .nav__label .nav__label-composition::after {
+      top: 0;
+      transform: rotate(90deg); }
+  .nav__chk:checked:hover ~ .nav__label .nav__label-composition {
+    transform: rotate(225deg); }
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+  .nav__item {
+    margin: 0 2rem;
+    font-size: 2.4rem;
+    color: #000;
+    z-index: 1000; }
+  .nav__link {
+    color: inherit; }
 
 .header {
   position: relative;
