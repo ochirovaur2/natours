@@ -12,23 +12,32 @@
 		
 		flex-basis: 33%;
 		transition: transform 0.8s ease;
-    	transform-style: preserve-3d;
+    	
     	&:last-child{
     		margin-right: 0;
     	}
-    	&:hover{
-    		transform: rotateY(-180deg);
-    	}
+    	// Rotate on hover
+
+		&:hover .tours-cards__front{
+			transform: rotateY(180deg);
+		}
+		&:hover .tours-cards__back{
+	    	transform: rotateY(0);
+	    }
+	
 	}
 	&__front,
 	&__back{
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		backface-visibility: hidden;
 		border-radius: 3px;
 		overflow: hidden;
 		box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
+		transition: all .8s ease;
 	}
+
 	// Front content
 	&__front{
 		background: #fff;
@@ -129,4 +138,8 @@
 		font-size: 5rem;
 		font-weight: 100;
 	}
+
+	
+
+
 }
