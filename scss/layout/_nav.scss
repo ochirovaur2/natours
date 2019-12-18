@@ -75,29 +75,42 @@
 	
 
 	// Menu
+	
 	&__list{
 		position: fixed;
-		top: 0;
-		left: -105%;
-		width: 100vw;
-		height: 100vh;
-		background: linear-gradient(to right,$color-primary-light, $color-primary-dark);
+		top: 6rem;
+		right: 6rem;
+		width: 6rem;
+		height: 6rem;
+		background: radial-gradient($color-primary-light, $color-primary-dark);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		transition: left 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		transition: all .4s ease-in-out;
+		transition-delay: .1s;
+		overflow: hidden;
+		border-radius: 50%;
+		visibility: hidden;
+		opacity: 0;
 	}
 	&__item{
-		padding: 2rem 0;
 		font-size: 3rem;
 		color: $color-light-1;
-		transition: all $transition-speed;
-		padding: 2rem 6rem;
 		position: relative;
+		
+		
+		color: $color-light-1;
+		
+		overflow: hidden;
+		
+	}
+	&__link{
+		display: inline-block;
+		color: inherit;
+		padding: 2rem 6rem;
 		border-radius: 3px;
 		overflow: hidden;
-		color: $color-light-1;
 		transition: all 1s;
 		&::before{
 			content: "";
@@ -109,20 +122,16 @@
 			background: rgba($color-light-1, 0.9);
 			transform: scale(2) translateX(100%) translateY(40%) rotate(5deg);
 			z-index: -1;
-			transition: transform 1s;
+			transition: transform .5s ease;
 		}
 		&:hover{
 			color: $color-primary-dark;
+			transform: translateX(1rem);
 		}
 		&:hover::before{
 			
 			transform: scale(2) translateX(0) translateY(0) rotate(15deg);
 		}
-		
-	}
-	&__link{
-		display: inline-block;
-		color: inherit;
 	}
 	&__chk:checked ~ &__label &__label-composition {
 	
@@ -139,7 +148,13 @@
 	transform: rotate(225deg);
 	}
 	&__chk:checked ~ &__list{
-		left: 0;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+		border-radius: 0;
 	}
 }
 
