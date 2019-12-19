@@ -7,7 +7,7 @@
 	left: -110%;
 	background-color: rgba($color-dark, .8);
 
-    transition: all $transition-speed;
+    transition: all .5s cubic-bezier(.26,.18,.54,1.26);
 	&__content{
 		@include absCenter;
 		width: 75%;
@@ -53,6 +53,7 @@
 	&:target {
         left: 0;
     }
+
 
 	// Close
 
