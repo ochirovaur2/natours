@@ -170,7 +170,7 @@
     background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
-	@include respond(tab-port) { 
+	@include respond(tab-land) { 
         padding: 3rem;
         background: linear-gradient( 
 		rgba($color-light-1,0.9), rgba($color-light-1,0.9)),

@@ -872,7 +872,7 @@ body {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) {
     .section-book {
       padding: 3rem;
       background: linear-gradient(rgba(247, 247, 247, 0.9), rgba(247, 247, 247, 0.9)), url("../img/nat-10.jpg"); } }
