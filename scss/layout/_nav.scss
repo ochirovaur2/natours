@@ -148,7 +148,7 @@
 	}
 	&__chk:checked:hover ~ &__label &__label-composition {
 	
-	transform: rotate(225deg);
+		transform: rotate(225deg);
 	}
 	&__chk:checked ~ &__list{
 		width: 100vw;

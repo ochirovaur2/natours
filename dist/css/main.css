@@ -167,6 +167,9 @@ body {
 
 .my-3 {
   margin: 3rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .my-3 {
+      margin: 2rem 0; } }
 
 .my-4 {
   margin: 4rem 0; }
@@ -558,25 +561,47 @@ body {
     display: flex;
     border-radius: 3px;
     align-items: center; }
+    @media only screen and (max-width: 75em) {
+      .popup__content {
+        height: 90vh;
+        overflow-y: auto;
+        flex-direction: column; } }
   .popup__photos {
     padding-left: 3rem;
     flex-basis: 33%;
     display: flex;
     flex-direction: column; }
+    @media only screen and (max-width: 75em) {
+      .popup__photos {
+        padding: 3rem 6rem 0 3rem; } }
   .popup__photo {
     width: 100%;
     height: auto; }
+    @media only screen and (max-width: 75em) {
+      .popup__photo:last-child {
+        display: none; } }
   .popup__text {
     flex-basis: 64%;
     padding: 3rem 5rem; }
   .popup__text-box {
     display: flex; }
+    @media only screen and (max-width: 75em) {
+      .popup__text-box {
+        flex-direction: column; } }
   .popup__paragraph {
     text-align: justify; }
   .popup__paragraph:not(:last-child) {
     margin-right: 2rem;
     padding-right: 2rem;
     border-right: 1px solid rgba(0, 0, 0, 0.1); }
+    @media only screen and (max-width: 75em) {
+      .popup__paragraph:not(:last-child) {
+        margin-right: inherit;
+        padding-right: inherit;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem; } }
   .popup:target {
     left: 0; }
   .popup__close {
@@ -725,7 +750,8 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   @media only screen and (max-width: 56.25em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%); } }
+      clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg"); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -828,6 +854,9 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat; }
+    @media only screen and (max-width: 56.25em) {
+      .section-features__background {
+        background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4-small.jpg"); } }
   .section-features > * {
     transform: skewY(5deg); }
   .section-features__container {
@@ -922,4 +951,4 @@ body {
   @media only screen and (max-width: 75em) {
     .section-book {
       padding: 3rem;
-      background: linear-gradient(rgba(247, 247, 247, 0.9), rgba(247, 247, 247, 0.9)), url("../img/nat-10.jpg"); } }
+      background: linear-gradient(rgba(247, 247, 247, 0.9), rgba(247, 247, 247, 0.9)), url("../img/nat-10-small.jpg"); } }
