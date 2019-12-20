@@ -5,8 +5,7 @@
 	-moz-perspective: 150rem;
 	@include respond(tab-port) { 
 	    flex-direction:column;
-		
-		
+
 	}
 	&__box-of-card{
 	    height: 52rem;

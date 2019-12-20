@@ -14,6 +14,9 @@
 }
 .py-big{
 	padding: 8rem 0;
+	@include respond(tab-port) { 
+		padding: 4rem 0;
+    }
 }
 .my-0-auto{
 	margin: 0 auto;
@@ -26,7 +29,11 @@
 
 .my-4 { margin: 4rem 0; }
 
-.my-big { margin: 8rem 0; }
+.my-big { margin: 8rem 0; 
+	@include respond(tab-port) { 
+		margin: 4rem 0; 
+    }
+}
 
 .my-top-normal { margin-top: 5rem }
 

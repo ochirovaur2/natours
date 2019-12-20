@@ -152,6 +152,9 @@ body {
 
 .py-big {
   padding: 8rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .py-big {
+      padding: 4rem 0; } }
 
 .my-0-auto {
   margin: 0 auto; }
@@ -170,6 +173,9 @@ body {
 
 .my-big {
   margin: 8rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .my-big {
+      margin: 4rem 0; } }
 
 .my-top-normal {
   margin-top: 5rem; }
@@ -271,25 +277,32 @@ body {
     outline-offset: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .composition__photo {
-        position: relative; } }
+        position: relative;
+        width: 33%; } }
     .composition__photo_p1 {
       left: 0;
       top: -2rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo_p1 {
-          top: 0; } }
+          top: 0;
+          left: 0;
+          transform: scale(1.1); } }
     .composition__photo_p2 {
       right: 0;
       top: 2rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo_p2 {
-          display: none; } }
+          top: -2rem;
+          transform: scale(1.2);
+          z-index: 11; } }
     .composition__photo_p3 {
       left: 20%;
       top: 10rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo_p3 {
-          display: none; } }
+          top: 0;
+          left: 0;
+          transform: scale(1.1); } }
     .composition__photo:hover {
       outline: 1.5rem solid #55c57a;
       transform: scale(1.05) translateY(-0.15rem);
@@ -420,6 +433,10 @@ body {
 .book__form-box {
   display: inline-block;
   padding: 6rem; }
+  @media only screen and (max-width: 75em) {
+    .book__form-box {
+      display: block;
+      margin: 0 auto; } }
 
 .book__input {
   font-size: 1.5rem;
@@ -452,6 +469,9 @@ body {
 .book__radio-group {
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .book__radio-group {
+      flex-direction: column; } }
 
 .book__radio-div {
   position: relative;
@@ -760,7 +780,8 @@ body {
     text-align: left; }
     @media only screen and (max-width: 56.25em) {
       .section-about__text {
-        text-align: center; } }
+        text-align: center;
+        margin-bottom: 4rem; } }
   @media only screen and (max-width: 56.25em) {
     .section-about__img-composition {
       padding: 3rem; } }
