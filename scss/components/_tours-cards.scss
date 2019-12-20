@@ -14,13 +14,14 @@
 		flex-basis: 33%;
 		transition: transform 0.8s ease;
 		@include respond(tab-port) { 
-	    	height: 104rem;
-	    	margin: 0 4rem;
+	    	height: auto;
+	    	margin: 4rem;
+	    	box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
 		}
     	&:last-child{
     		margin-right: 0;
     		@include respond(tab-port) { 
-	    	margin: 0 4rem;
+	    	margin: 4rem;
 			}
     	}
     	
@@ -45,11 +46,11 @@
 		backface-visibility: hidden;
 		border-radius: 3px;
 		overflow: hidden;
-		box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
+		box-shadow: none;
 		transition: all .8s ease;
 		@include respond(tab-port) { 
 	    	position: relative;
-
+			
 		}
 	}
 
@@ -57,7 +58,8 @@
 	&__front{
 		background: #fff;
 		@include respond(tab-port) {
-	    	height: 55%;
+	    	height: auto;
+	    	padding-bottom: 3rem;
 		}
 	}
 	&__top{
@@ -151,9 +153,9 @@
 		@include respond(tab-port) {
 
 	    	transform: rotateY(0);
-	    	height: 40%;
-	    	clip-path: polygon(0 2rem, 100% 0, 100% 100%, 0 100%);
-	    	margin-top: -3rem;
+	    	height: auto;
+	    	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+	    	margin-top: -1.5rem;
 		}
 	}
 	&__price-text{

@@ -41,7 +41,11 @@
 
 .my-bottom-small{ margin-bottom: 1.6rem; }
 
-.my-bottom-3{ margin-bottom: 3rem; }
+.my-bottom-3{ margin-bottom: 3rem; 
+	@include respond(tab-port) { 
+		margin-bottom: 1rem;
+    }
+}
 
 .my-bottom-middle{ margin-bottom: 4rem; }
 
