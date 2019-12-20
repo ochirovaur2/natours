@@ -31,7 +31,10 @@
 		align-items: center;
 		justify-content: center;
 		opacity: 0.9;
-		
+		@include respond(tab-port) {
+	    	top: 0rem;
+			right: 3rem;
+		}
 		&-composition{
 			position: relative;
 			display: flex;

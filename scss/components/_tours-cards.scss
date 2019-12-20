@@ -3,23 +3,35 @@
 	justify-content: space-between;
 	perspective: 150rem;
 	-moz-perspective: 150rem;
+	@include respond(tab-port) { 
+	    flex-direction:column;
+		
+		
+	}
 	&__box-of-card{
-		
-		
 	    height: 52rem;
 		margin-right: 6rem;
 		position: relative;
-		
 		flex-basis: 33%;
 		transition: transform 0.8s ease;
-    	
+		@include respond(tab-port) { 
+	    	height: 104rem;
+	    	margin: 0 4rem;
+		}
     	&:last-child{
     		margin-right: 0;
+    		@include respond(tab-port) { 
+	    	margin: 0 4rem;
+			}
     	}
+    	
     	// Rotate on hover
 
 		&:hover .tours-cards__front{
 			transform: rotateY(180deg);
+			@include respond(tab-port) { 
+		    	transform: rotateY(0deg);
+			}
 		}
 		&:hover .tours-cards__back{
 	    	transform: rotateY(0);
@@ -36,12 +48,18 @@
 		overflow: hidden;
 		box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
 		transition: all .8s ease;
+		@include respond(tab-port) { 
+	    	position: relative;
+
+		}
 	}
 
 	// Front content
 	&__front{
 		background: #fff;
-		
+		@include respond(tab-port) {
+	    	height: 55%;
+		}
 	}
 	&__top{
 		position: relative;
@@ -103,6 +121,9 @@
     }
     &__list{
     	padding: 3rem;
+    	@include respond(tab-port) {
+	    	padding: 1rem;
+		}
     	&-item{
 			padding: 1rem;
 			font-size: 1.5rem;
@@ -127,6 +148,13 @@
 		}
 		&_third{
 			background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+		}
+		@include respond(tab-port) {
+
+	    	transform: rotateY(0);
+	    	height: 40%;
+	    	clip-path: polygon(0 2rem, 100% 0, 100% 100%, 0 100%);
+	    	margin-top: -3rem;
 		}
 	}
 	&__price-text{

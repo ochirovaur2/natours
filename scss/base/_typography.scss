@@ -17,7 +17,7 @@ body{
 		animation: moveInLeft 1s;
 		animation-timing-function: ease-out;
 		@include respond(phone) { 
-			letter-spacing: .9rem;
+			letter-spacing: .5rem;
     	}
 	}
 	&_sub{
@@ -28,7 +28,7 @@ body{
 		animation: moveInRight 1s;
 		animation-timing-function: ease-out;
 		@include respond(phone) { 
-			letter-spacing: .75rem;
+			letter-spacing: .6rem;
     	}
 	}
 }
