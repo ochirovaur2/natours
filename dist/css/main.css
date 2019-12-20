@@ -194,6 +194,9 @@ body {
 
 .my-bottom-big {
   margin-bottom: 8rem; }
+  @media only screen and (max-width: 56.25em) {
+    .my-bottom-big {
+      margin-bottom: 4rem; } }
 
 .u-center-text {
   text-align: center; }
@@ -279,6 +282,9 @@ body {
       .composition__photo {
         position: relative;
         width: 33%; } }
+    @media only screen and (max-width: 37.5em) {
+      .composition__photo {
+        width: 65%; } }
     .composition__photo_p1 {
       left: 0;
       top: -2rem; }
@@ -295,6 +301,9 @@ body {
           top: -2rem;
           transform: scale(1.2);
           z-index: 11; } }
+      @media only screen and (max-width: 37.5em) {
+        .composition__photo_p2 {
+          display: none; } }
     .composition__photo_p3 {
       left: 20%;
       top: 10rem; }
@@ -303,6 +312,9 @@ body {
           top: 0;
           left: 0;
           transform: scale(1.1); } }
+      @media only screen and (max-width: 37.5em) {
+        .composition__photo_p3 {
+          display: none; } }
     .composition__photo:hover {
       outline: 1.5rem solid #55c57a;
       transform: scale(1.05) translateY(-0.15rem);
@@ -454,6 +466,9 @@ body {
     border-bottom: 3px solid #ff7730; }
   .book__input::-webkit-input-placeholder {
     color: #55c57a; }
+  @media only screen and (max-width: 37.5em) {
+    .book__input {
+      width: 100%; } }
 
 .book__label {
   display: inline-block;
@@ -766,7 +781,7 @@ body {
   padding: 10rem 0; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
-      padding: 10rem 0 1rem 0; } }
+      padding: 6rem 0 1rem 0; } }
   .section-about__content {
     display: flex;
     justify-content: space-around; }
@@ -785,6 +800,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-about__img-composition {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-about__img-composition {
+      padding: 0rem; } }
 
 .section-features {
   padding: 20rem 0;
@@ -835,6 +853,9 @@ body {
 .section-stories {
   background: linear-gradient(to right, #7ed56f, #28b485);
   clip-path: polygon(0 12rem, 100% 0, 100% 100%, 0 100%); }
+  @media only screen and (max-width: 56.25em) {
+    .section-stories {
+      clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0 100%); } }
   .section-stories__stories-box {
     width: 75%;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);

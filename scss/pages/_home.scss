@@ -2,7 +2,7 @@
 	background: $color-light-1;
 	padding: 10rem 0;
 	@include respond(tab-port) { // width < 900?
-       padding: 10rem 0 1rem 0;
+       padding: 6rem 0 1rem 0;
     }
 	&__content{
 		display: flex;
@@ -27,6 +27,10 @@
 	&__img-composition{ 
 		@include respond(tab-port) { // width < 900?
         	padding: 3rem;
+
+    	}
+    	@include respond(phone) { 
+        	padding: 0rem;
 
     	}
 	}
@@ -95,6 +99,9 @@
 	// 	transform: $skewY-primary-opposite;
 	// }
 	clip-path: polygon(0 12rem, 100% 0, 100% 100%, 0 100%);
+	@include respond(tab-port) { 
+        clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0 100%);
+    }
 	&__stories-box{
 		width: 75%;
 	    box-shadow: 0 3rem 6rem rgba($color-dark, 0.1);

@@ -45,7 +45,11 @@
 
 .my-bottom-middle{ margin-bottom: 4rem; }
 
-.my-bottom-big{ margin-bottom: 8rem; }
+.my-bottom-big{ margin-bottom: 8rem; 
+	@include respond(tab-port) { 
+        margin-bottom: 4rem;
+   	}
+}
 
 
 .u-center-text{ text-align: center;}

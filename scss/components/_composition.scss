@@ -11,7 +11,9 @@
         @include respond(tab-port) { 
             position: relative;
             width: 33%;
-
+        }
+        @include respond(phone) { 
+            width: 65%;
         }
         &_p1 {
             left: 0;
@@ -21,6 +23,7 @@
                 left: 0;
                 transform: scale(1.1);
             }
+            
         }
 
         &_p2 {
@@ -31,6 +34,9 @@
                 transform: scale(1.2);
                 z-index: 11;
             }
+            @include respond(phone) { 
+               display: none;
+            }
         }
 
         &_p3 {
@@ -40,6 +46,9 @@
                top: 0;
                left: 0;
                transform: scale(1.1);
+            }
+            @include respond(phone) { 
+               display: none;
             }
         }
 
