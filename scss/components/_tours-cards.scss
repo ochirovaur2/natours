@@ -3,7 +3,8 @@
 	justify-content: space-between;
 	perspective: 150rem;
 	-moz-perspective: 150rem;
-	@include respond(tab-port) { 
+	@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) { 
 	    flex-direction:column;
 
 	}
@@ -13,14 +14,16 @@
 		position: relative;
 		flex-basis: 33%;
 		transition: transform 0.8s ease;
-		@include respond(tab-port) { 
+		@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) { 
 	    	height: auto;
 	    	margin: 4rem;
 	    	box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
 		}
     	&:last-child{
     		margin-right: 0;
-    		@include respond(tab-port) { 
+    		@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) { 
 	    	margin: 4rem;
 			}
     	}
@@ -29,7 +32,8 @@
 
 		&:hover .tours-cards__front{
 			transform: rotateY(180deg);
-			@include respond(tab-port) { 
+			@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) { 
 		    	transform: rotateY(0deg);
 			}
 		}
@@ -48,7 +52,8 @@
 		overflow: hidden;
 		box-shadow: none;
 		transition: all .8s ease;
-		@include respond(tab-port) { 
+		@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) { 
 	    	position: relative;
 			
 		}
@@ -57,7 +62,8 @@
 	// Front content
 	&__front{
 		background: #fff;
-		@include respond(tab-port) {
+		@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) {
 	    	height: auto;
 	    	padding-bottom: 3rem;
 		}
@@ -122,7 +128,8 @@
     }
     &__list{
     	padding: 3rem;
-    	@include respond(tab-port) {
+    	@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) {
 	    	padding: 1rem;
 		}
     	&-item{
@@ -150,8 +157,9 @@
 		&_third{
 			background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
 		}
-		@include respond(tab-port) {
-
+		@media only screen and (max-width: 56.25em),
+		       only screen and (hover:none) {
+		
 	    	transform: rotateY(0);
 	    	height: auto;
 	    	clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);

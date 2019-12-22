@@ -33,3 +33,8 @@ a{
 li {
 	list-style: none;
 }
+
+::selection {
+	background: $color-primary;
+	color: $color-light-1;
+}

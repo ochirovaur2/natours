@@ -141,16 +141,24 @@
 	&__photo-box{
 		width: 15rem;
         height: 15rem;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle();
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle();
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
 		float: left;
+		border-radius: 50%;
+		@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 		@include respond(tab-port) { 
         	transform: translateX(-3rem) skewX(0);
+        	display: block;
+			margin: 3rem auto;
+			padding-bottom: 3rem;
+			float: none;
     	}
 	}
 	&__photo{
@@ -198,8 +206,8 @@
 	                url("../img/nat-10-small.jpg") ;
     }
     @media (min-resolution: 192dpi) and (min-width: 900px) {
-		background-image: linear-gradient(to right bottom, rgba($color-secondary-light,0.8),
-	                      rgba($color-secondary-dark,0.8)),
+		background-image: linear-gradient(to right bottom, rgba($color-light-1,0.8),
+	                      rgba($color-light-1,0.8)),
 	                      url("../img/nat-10.jpg");
 	}
 	

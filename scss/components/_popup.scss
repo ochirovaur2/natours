@@ -6,9 +6,13 @@
 	top: 0;
 	left: -110%;
 	background-color: rgba($color-dark, .8);
-
     transition: all .5s cubic-bezier(.26,.18,.54,1.26);
-    
+   	
+	@supports(backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+		webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-dark, .3);
+	}
 	&__content{
 		@include absCenter;
 		width: 75%;
@@ -36,16 +40,13 @@
 	&__photo{
 		width: 100%;
 		height: auto;
-
 		@include respond(tab-land) {
 			&:last-child{
 				display: none;
 			}
 		}
 	}
-
 	// Text
-
 	&__text{
 		flex-basis: 64%;
 		padding: 3rem 5rem;
